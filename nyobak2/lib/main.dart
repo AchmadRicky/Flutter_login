@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dua.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -95,47 +96,5 @@ class _HalHallo extends State<HomePage> {
             ),
           ],
         ));
-  }
-}
-
-class screentwo extends StatefulWidget {
-  String value;
-  String valuep;
-  screentwo({this.value, this.valuep});
-
-  @override
-  _screentwoState createState() => _screentwoState(value, valuep);
-}
-
-// ignore: camel_case_types
-class _screentwoState extends State<screentwo> {
-  String value;
-  String valuep;
-  _screentwoState(this.value, this.valuep);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: new AppBar(
-        leading: new Icon(Icons.android),
-        title: new Text(
-          "Login Android",
-          style: new TextStyle(fontFamily: "Serif", fontSize: 20.0),
-        ),
-      ),
-      body: Container(
-        padding: new EdgeInsets.all(48.0),
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Center(
-              child: new Text(
-                "Anda Login Sebagai : $value \n\n\n Dengan Password : $valuep",
-                style: new TextStyle(fontFamily: "Serif", fontSize: 20.0),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
   }
 }
